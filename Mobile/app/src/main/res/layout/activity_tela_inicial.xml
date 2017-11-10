@@ -36,6 +36,12 @@
             android:layout_alignParentTop="true"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="perfil"
+                android:text="Button" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -33,5 +33,10 @@ public class TelaInicialActivity extends AppCompatActivity {
         String bemvindo = boasVindas.getText().toString() +  sessao.getNome() + ".";
         boasVindas.setText(bemvindo);
     }
+    public void perfil(View view){
+        startActivity(new Intent(this, PerfilActivity.class));
+        finish();
+
+    }
 
 }

@@ -24,4 +24,8 @@
     <string name="btn_logar">Log In</string>
     <string name="error_campo_vazio">Campo Vazio</string>
     <string name="nome_especie">Nome</string>
+    <string name="numero_respostas">Respostas</string>
+    <string name="numero_perguntas">Perguntas</string>
+    <string name="tags">Top Tags</string>
+    <string name="posts">Top Posts</string>
 </resources>
