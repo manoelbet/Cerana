@@ -28,14 +28,16 @@ public class UsuarioNegocio {
         return usuario;
     }
 
-    public void validarCadastro(Pessoa pessoa)  {
+    public boolean validarCadastro(Pessoa pessoa)  {
         usuarioDao = new UsuarioDao(context);
 
         if (usuarioDao.buscarUsuario(pessoa.getUsuario().getLogin())==null){
             usuarioDao.inserirRegistro(pessoa);
             Toast.makeText(context, "Cadastro realizado", Toast.LENGTH_LONG).show();
+            return true;
         }else{
             Toast.makeText(context,"Usuário já cadastrado",Toast.LENGTH_LONG).show();
+            return false;
         }
 
     }
@@ -52,14 +54,24 @@ public class UsuarioNegocio {
         return m.matches();
     }
 
-    public boolean verificarTamanho(String campo) {
+    public boolean verificarTamanhoSenha(String campo) {
         String texto = campo;
-        if (texto.length() > 8 || texto.length() < 4) {
+        if (texto.length()  < 8 ) {
             return false;
         } else {
             return true;
         }
     }
+
+    public boolean verificarTamanhoLogin(String campo){
+        String texto = campo;
+        if  (texto.length() < 5){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 
 
 }

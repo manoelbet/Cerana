@@ -77,8 +77,10 @@ public class CadastroActivity extends AppCompatActivity {
             pessoa.setNome(et_nome.getText().toString());
             pessoa.setUsuario(usuario);
 
-            usuarioNegocio.validarCadastro(pessoa);
-            iniciarLoginActivity();
+            if (usuarioNegocio.validarCadastro(pessoa)){
+                iniciarLoginActivity();
+            };
+
         }
     }
 
@@ -138,7 +140,7 @@ public class CadastroActivity extends AppCompatActivity {
         }else if(!usuarioNegocio.verAlfanumerico(login)){
             et_user.requestFocus();
             et_user.setError(resources.getString(R.string.erro_caracter_especial));
-        }else if(!usuarioNegocio.verificarTamanho(login)){
+        }else if(!usuarioNegocio.verificarTamanhoLogin(login)){
             et_user.requestFocus();
             et_user.setError(resources.getString(R.string.erro_tamanho_login));
         }else if(!usuarioNegocio.verEspacosBrancos(senha)){
@@ -147,7 +149,7 @@ public class CadastroActivity extends AppCompatActivity {
         }else if(!usuarioNegocio.verAlfanumerico(senha)) {
             et_password.requestFocus();
             et_password.setError(resources.getString(R.string.erro_caracter_especial));
-        }else if(!usuarioNegocio.verificarTamanho(senha)){
+        }else if(!usuarioNegocio.verificarTamanhoSenha(senha)){
             et_password.requestFocus();
             et_password.setError(resources.getString(R.string.erro_tamanho_senha));
         }else {

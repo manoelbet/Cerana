@@ -24,4 +24,11 @@
     <string name="btn_logar">Log In</string>
     <string name="error_campo_vazio">Campo Vazio</string>
     <string name="nome_especie">Nome</string>
+    <string name="perguntas">Perguntas</string>
+    <string name="respostas">Respostas</string>
+    <string name="tags">Top tags</string>
+    <string name="Descricao">Descrição</string>
+    <string name="posts">Posts</string>
+    <string name="bio">Escreva sobre você</string>
+    <string name="editarPerfil">Editar perfil</string>
 </resources>
